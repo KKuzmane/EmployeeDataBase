@@ -12,7 +12,7 @@
             }
             else if (inTraining == "Yes")
             {
-                status = "InTraining";
+                status = "In Training";
             }
             else
             {
