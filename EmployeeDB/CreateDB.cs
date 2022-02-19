@@ -58,5 +58,33 @@ namespace EmployeeDB
             cmd.Parameters.Add("@name", DbType.String).Value = "Employees";
             return (cmd.ExecuteScalar() != null);
         }
+
+        public static void CreateDbTable(SQLiteConnection connection)
+        {
+            List<NewEmployee> employees = new List<NewEmployee>();
+            CreateDB.CreateTable(connection);
+
+            using (var reader =
+                   new StreamReader(@"C:\Users\krist\Desktop\06-2021\EmployeeDataBase\EmployeeDataTest.csv"))
+            {
+                string headerLine = reader.ReadLine();
+                string newLine;
+                while ((newLine = reader.ReadLine()) != null)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(';');
+
+                    var status = Add_HR_Status.FillHRStatusColumn(values[10], values[6]);
+                    var email = CreateEmail.CreateCompanyEmail(values[0], values[1]);
+
+                    var employee = new NewEmployee(values[0], values[1], values[2], values[3], values[4], values[5],
+                        values[6], values[7], values[8], values[9], values[10]);
+
+                    CreateDB.InsertData(connection, employee, status, email);
+
+                    employees.Add(employee);
+                }
+            }
+        }
     }
 }
