@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeDB
+﻿namespace EmployeeDB
 {
     public class Add_HR_Status
     {
