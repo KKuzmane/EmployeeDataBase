@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace EmployeeDB
 {
@@ -55,7 +56,7 @@ namespace EmployeeDB
             CreateDB.CreateTable(connection);
 
             using (var reader =
-                   new StreamReader(@"C:\Users\krist\Desktop\06-2021\EmployeeDataBase\EmployeeDataTest.csv"))
+                   new StreamReader(@"./EmployeeDataTestCSVFile/EmployeeDataTest.csv"))
             {
                 string headerLine = reader.ReadLine();
                 string newLine;
@@ -67,8 +68,11 @@ namespace EmployeeDB
                     var status = Add_HR_Status.FillHRStatusColumn(values[10], values[6]);
                     var email = CreateEmail.CreateCompanyEmail(values[0], values[1]);
 
+                    string hiredDate = Regex.Replace(values[9], @"[^0-9a-zA-Z]+", "-");
+                    string terminatedDate = Regex.Replace(values[10], @"[^0-9a-zA-Z]+", "-");
+
                     var employee = new NewEmployee(values[0], values[1], values[2], values[3], values[4], values[5],
-                        values[6], values[7], values[8], values[9], values[10]);
+                        values[6], values[7], values[8], hiredDate, terminatedDate);
 
                     CreateDB.InsertData(connection, employee, status, email);
                 }
