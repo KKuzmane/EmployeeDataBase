@@ -21,7 +21,7 @@ namespace EmployeeDB
                 CreateDB.CreateTable(sqlite_conn);
 
                 using (var reader =
-                       new StreamReader(@"C:\Users\krist\Desktop\06-2021\CSV-file-reader\EmployeeDataTest.csv"))
+                       new StreamReader(@"C:\Users\krist\Desktop\06-2021\EmployeeDataBase\EmployeeDataTest.csv"))
                 {
                     string headerLine = reader.ReadLine();
                     string newLine;
