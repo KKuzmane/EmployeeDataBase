@@ -5,7 +5,47 @@
       "ProjectGuid": "fbfef2d9-5c48-4539-8c36-e7d2b3e40d4c",
       "DisplayName": "EmployeeDB",
       "ColorIndex": 0
+    },
+    "ffb846e4-6379-4f4a-91ed-ac2eb33a9983": {
+      "ProjectGuid": "ffb846e4-6379-4f4a-91ed-ac2eb33a9983",
+      "DisplayName": "HRStatusTests",
+      "ColorIndex": 1
+    },
+    "c1232d8a-10cd-48b6-91c3-f280d6643153": {
+      "ProjectGuid": "c1232d8a-10cd-48b6-91c3-f280d6643153",
+      "DisplayName": "CreateDBTests",
+      "ColorIndex": 2
+    },
+    "b5844d61-ec12-43c8-b458-123c09ce94d8": {
+      "ProjectGuid": "b5844d61-ec12-43c8-b458-123c09ce94d8",
+      "DisplayName": "CreateDBTest",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "2b66716a-5501-4d31-862b-b581b93283f4": {
+      "ProjectGuid": "2b66716a-5501-4d31-862b-b581b93283f4",
+      "DisplayName": "HRStatusTests",
+      "ColorIndex": 4
+    },
+    "f921898b-386c-44dd-99b3-ae759dd5331a": {
+      "ProjectGuid": "f921898b-386c-44dd-99b3-ae759dd5331a",
+      "DisplayName": "NewEmployeeTests",
+      "ColorIndex": 5
+    },
+    "fbebc18d-30b7-46c1-8556-63494165bdd7": {
+      "ProjectGuid": "fbebc18d-30b7-46c1-8556-63494165bdd7",
+      "DisplayName": "CreateEmailTests",
+      "ColorIndex": 6
+    },
+    "3e7c7903-158a-421a-b271-ca326a49bb07": {
+      "ProjectGuid": "3e7c7903-158a-421a-b271-ca326a49bb07",
+      "DisplayName": "NewEmployeeTests",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 8
 }
